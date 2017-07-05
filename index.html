@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A small webapp to help players find the culprit in the Find the Suspect Mabinogi Event. You're 3 clicks away from the truth!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Find the Suspect Event Helper</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Find the Suspect Event Helper</h1>
+<div id="logs">
+    <div>
+        <input id="log_1" type="checkbox" value="#npc_1,#npc_2,#npc_4">
+        <label for="log_1" class="button"><span>Detective Log</span> I</label>
+    </div>
+    <div>
+        <input id="log_2" type="checkbox" value="#npc_2,#npc_3,#npc_5">
+        <label for="log_2" class="button"><span>Detective Log</span> II</label>
+    </div>
+    <div>
+        <input id="log_3" type="checkbox" value="#npc_3,#npc_4,#npc_6">
+        <label for="log_3" class="button"><span>Detective Log</span> III</label>
+    </div>
+    <div>
+        <input id="log_4" type="checkbox" value="#npc_4,#npc_5,#npc_7">
+        <label for="log_4" class="button"><span>Detective Log</span> IV</label>
+    </div>
+    <div>
+        <input id="log_5" type="checkbox" value="#npc_5,#npc_6,#npc_8">
+        <label for="log_5" class="button"><span>Detective Log</span> V</label>
+    </div>
+    <div>
+        <input id="log_6" type="checkbox" value="#npc_6,#npc_7,#npc_9">
+        <label for="log_6" class="button"><span>Detective Log</span> VI</label>
+    </div>
+    <div>
+        <input id="log_7" type="checkbox" value="#npc_7,#npc_8,#npc_X">
+        <label for="log_7" class="button"><span>Detective Log</span> VII</label>
+    </div>
+    <div>
+        <input id="log_8" type="checkbox" value="#npc_8,#npc_9,#npc_1">
+        <label for="log_8" class="button"><span>Detective Log</span> VIII</label>
+    </div>
+    <div>
+        <input id="log_9" type="checkbox" value="#npc_9,#npc_X,#npc_2">
+        <label for="log_9" class="button"><span>Detective Log</span> IX</label>
+    </div>
+    <div>
+        <input id="log_X" type="checkbox" value="#npc_X,#npc_1,#npc_3">
+        <label for="log_X" class="button"><span>Detective Log</span> X</label>
+    </div>
+</div>
+<div id="npcs">
+    <div><a id="npc_1" class="button">Ferghus</a></div>
+    <div><a id="npc_2" class="button">Tracy</a></div>
+    <div><a id="npc_3" class="button">Manus</a></div>
+    <div><a id="npc_4" class="button">Simon</a></div>
+    <div><a id="npc_5" class="button">Beggar</a></div>
+    <div><a id="npc_6" class="button">Osla</a></div>
+    <div><a id="npc_7" class="button">Berched</a></div>
+    <div><a id="npc_8" class="button">Devi</a></div>
+    <div><a id="npc_9" class="button">Keith</a></div>
+    <div><a id="npc_X" class="button">Lileas</a></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    $('input').on('change', function () {
+        $('#npcs a').removeClass('alibi');
+        $('input:checked').each(function () {
+            $(this.value).addClass('alibi');
+        });
+    });
+</script>
+</body>
+</html>

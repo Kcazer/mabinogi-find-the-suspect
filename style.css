@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    max-width: 280px;
+    margin: 12px auto;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    line-height: 36px;
+    width: 160px;
+    margin: 0 0 6px 0;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#logs {
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+#logs > div {
+    margin-right: 16px;
+    text-align: right;
+}
+
+#logs input {
+    display: none;
+}
+
+#logs .button {
+    color: rgba(0, 0, 0, .26);
+    background: rgba(0, 0, 0, .12);
+    box-shadow: none;
+}
+
+#logs :checked + .button {
+    color: #000;
+    background: rgba(158, 158, 158, .2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+#npcs {
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+#npcs > div {
+    margin-left: 16px;
+    text-align: left;
+}
+
+#npcs .button {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#npcs .button.alibi {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .button {
+        display: block;
+        width: auto;
+        line-height: 34px;
+    }
+
+    #logs {
+        width: 80px;
+    }
+
+    #logs > div {
+        margin-right: 3px;
+    }
+
+    #logs span {
+        display: none;
+    }
+
+    #npcs {
+        width: auto;
+        float: none;
+        margin-left: 80px;
+    }
+
+    #npcs > div {
+        margin-left: 3px;
+    }
+}
